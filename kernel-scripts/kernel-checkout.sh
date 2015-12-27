@@ -17,7 +17,7 @@ if [ -z "$REPO" ]; then
   echo "Building kernel from local workspace at /ide/work"
 elif [ -n "$COMMIT" ]; then
   echo "Building kernel from ${REPO} commit ${COMMIT}"
-  git remote add build "${REPO}"
+  git remote add -f build "${REPO}"
   git fetch build
   git checkout "$COMMIT"
 else
