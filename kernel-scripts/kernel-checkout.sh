@@ -11,7 +11,7 @@ if [ ! -e "/ide/work/linux" ]; then
   cp -R /ide/linux /ide/work/linux
 fi
 
-cd /ide/work
+cd /ide/work/linux
 if [ -z "$REPO" ]; then
   # repository is not set, just built with local contents
   echo "Building kernel from local workspace at /ide/work"
